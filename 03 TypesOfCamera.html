@@ -1,0 +1,363 @@
+<head>
+    <title>web</title>
+    <style>
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: #1d061a */
+  background-image: url(bg2.png);
+        background-size:contain;
+        background-repeat: repeat;
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: #1d061a */
+  background-image: url(bg2.png);
+        background-size:contain;
+        background-repeat: repeat;
+}
+
+.hero{
+	height: 100vh;
+	width: 100%;
+	background-image: url(bg2.png);
+	background-size: cover;
+	background-position: center;
+}
+.logo{
+	color: white;
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+span{
+	color: #f9004d;
+}
+
+
+
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 45px;
+	padding-left: 8%;
+	padding-right: 8%;}
+
+    .logo{
+	color: white;
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+span{
+	color: #f9004d;
+}
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px  25px;
+  font-size: larger;
+}
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+nav ul li a:hover{
+	color: #f9004d;
+	transition: .4s;}
+
+.container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.container .box
+{
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 100px 20px; */
+  margin-top: 450px;
+  margin-right: 40px;
+  margin-left: 30px;
+  transition: 0.5s;
+}
+
+.container .box::before
+{
+  content:' ';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+
+.container .box::after
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 50;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(30px);
+}
+
+.container .box:hover:before,
+.container .box:hover:after
+{
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+  
+}
+
+.container .box:nth-child(1):before,
+.container .box:nth-child(1):after
+{
+  background: linear-gradient(315deg, #ffbc00, #ff0058)
+}
+
+.container .box:nth-child(2):before,
+.container .box:nth-child(2):after
+{
+  background: linear-gradient(315deg, #03a9f4, #ff0058)
+}
+
+.container .box:nth-child(3):before,
+.container .box:nth-child(3):after
+{
+  background: linear-gradient(315deg, #4dff03, #00d0ff)
+}
+
+.container .box span
+{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.container .box span::before
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.1s;  
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+}
+
+.container .box .content
+{
+  position: relative;
+  left: 0;
+  padding: 40px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  transform: 0.5s;
+  color: #fff;
+}
+
+.container .box:hover .content
+{
+  left: -25px;
+  padding: 60px 40px;
+}
+
+ .container .box .content h2 
+{
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.container .box .content p
+{
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.container .box .content a
+{
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  background: #fff; 
+  padding: 50px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.container .box .content a:hover
+{
+  background: #ffcf4d;
+  border: 1px solid rgba(255, 0, 88, 0.4);
+  box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+}
+    </style>
+</head>
+<body>
+  <div class="hero">
+		<nav>
+			<a href="index.html"><h2 class="logo">Shutter<span>Up</span></h2></a>
+			<ul>
+				<li class="na1"><a href="index.html">Home</a></li> 
+				<li class="na1"><a href="03 TypesOfCamera.html">About</a></li>
+				<li class="na1"><a href="08 Contact Us.html">Contact Us</a></li>
+			</ul>
+		</nav>
+    <!-- <h1 class="headi1">Features Of Camera</h1>  -->
+    <div class="container">
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>DSLR Camera</h2>
+            <p>DSLR stands for “Digital Single Lens Reflex”. If you’re looking to take your photography to a more 
+                professional level, consider getting a DSLR camera. They have been the go to camera for many professionals
+                 in the digital age.When you look through the viewfinder of a DSLR you’re seeing through the lens with the help of 
+                 a mirror and prism. These are inside the camera body and allow you to view images the right way up. When you take
+                  a photo, the mirror flips up so light and enter through the shutter and reach the sensor.DSLRs range in price and 
+                  quality. If you’re budget and enthusiasm are up for it, the sky’s the limit. Top of the line DSLRs are heavy-duty 
+                  pieces of camera equipment built for rugged use.</p>
+          </div>
+        </div>
+        <div class="box">
+            <span></span>
+            <div class="content">
+              <h2>Mirrorless Cameras</h2>
+              <p>Digital mirrorless cameras, as the name suggests, have no mirror. What you see when you look through the viewfinder is an 
+                small electronic screen. This displays what you are pointing your lens at.In recent years mirrorless cameras have gained popularity.
+                 People love them because they are smaller and lighter than many DSLR cameras with no less quality Like DSLRs mirrorless cameras 
+                 come with full-frame or crop sensors. There is no difference in image quality between DSLR and mirrorless cameras with 
+                 comparable sensors.Many photographers who switch from DSLR to mirrorless struggle with the electronic viewfinder. Seeing 
+                 a digital image, rather than seeing optically through the lens, is challenging. Mirrorless cameras have a growing range of lenses available.</p>
+            </div>
+          </div>
+
+          <div class="box">
+            <span></span>
+            <div class="content">
+              <h2>Bridge Cameras</h2>
+              <p>A bridge camera is a type of camera many people choose when they get more serious about photography. You may have discovered 
+                you love taking pictures. Is using your phone or compact camera limiting? Bridge cameras are far more capable and without 
+                the limitations of smaller cameras.At a glance, a bridge camera with a viewfinder looks like a DSLR camera. However, 
+                despite their likeness, there are significant differences. They are smaller, lighter, and easier to handle. Picking up 
+                your first bridge camera can be an ideal way to embark on developing your love for photography.Bridge cameras fill the 
+                gap in quality between phones and compacts and the first two types of camera on our list. The size of the sensor is not
+                 as big as in most DSLRs and mirrorless cameras.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+            <div class="box">
+              <span></span>
+              <div class="content">
+                <h2>Action Cameras</h2>
+                <p>Action cameras, sometimes called Adventure cameras, are great for outdoor filming, or otherwise rough conditions. 
+                    They’re often used for sports photography and videography. Weather and shockproof, these cameras are generally small 
+                    and lightweight and the sensor is guarded with super durable glass. GoPros are common action cameras. Because of their
+                     small sensors, technically they’re not “for professional use” but I mostly disagree. You can get some pretty incredible
+                      shots and at the very least, inter-splice them with other footage from a DSLR or mirrorless. Again, it depends on the 
+                      project and what overall aesthetic you’re trying to achieve.The video above shows the new GoPro and its footage.</p>
+              </div>
+            </div>
+
+             <div class="box"> 
+                <span></span>
+                <div class="content">
+                  <h2>Compact Cameras</h2>
+                  <p>Your standard compact camera, often referred to as a point-and-shoot camera, does just that. They offer no real adjustable 
+                    camera settings, but are incredibly affordable. They’re light-weight, easy to use, and you just point and shoot. They remind me 
+                    of what family vacations are captured on - they belong in a 90s fanny pack, and are taken out when Mom wants a photo in front of a
+                     statue. Okay, I’m mostly kidding. Compact cameras are pretty awesome. And today, there are quite a few different kinds of these 
+                     compact cameras that do allow you to get a little more involved in the photography process. </p>
+                </div>
+              </div>
+
+              <div class="box">
+                <span></span>
+                <div class="content">
+                  <h2>Traditional Film Cameras</h2>
+                  <p>Digital probably has way more advantages than traditional film. Well, not probably -- it does. Digital gives you the photos in real 
+                    time and doesn’t involve developing or film costs. If you’re smart about backing up your photos, you’ll likely never lose them. But 
+                    there is something about shooting with real film that no digital camera can touch. A nostalgic look and feel that still produces
+                     incredible res photos</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="container"> 
+              <div class="box">
+                <span></span>
+                <div class="content">
+                  <h2>Smartphone Cameras</h2>
+                  <p>This is the most popular and user-friendly choice of camera for anyone.
+                    Stores all your photos on your device, and you have the option to upload them immediately
+                    You can capture all the candid moments, landscapes, and portraits without much effort.
+                    The quality of smartphone cameras has improved dramatically.Small, lightweight, and versatile
+                    Convenience
+                    Easy storage and cloud backup
+                    Add-on lenses
+                    Great selection of accessories</p>
+                </div>
+              </div>-->
+              
+  
+
+            
+        
+        
+</body>

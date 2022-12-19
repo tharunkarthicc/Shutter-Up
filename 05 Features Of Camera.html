@@ -1,0 +1,357 @@
+<head>
+    <title>web</title>
+    <style>
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: #1d061a */
+  background-image: url(bg2.png);
+        background-size:contain;
+        background-repeat: repeat;
+}
+.hero{
+	height: 100vh;
+	width: 100%;
+	background-image: url(bg2.png);
+	background-size: cover;
+	background-position: center;
+}
+.logo{
+	color: white;
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+span{
+	color: #f9004d;
+}
+
+
+
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 45px;
+	padding-left: 8%;
+	padding-right: 8%;}
+
+    .logo{
+	color: white;
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+span{
+	color: #f9004d;
+}
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px  25px;
+  font-size: larger;
+}
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+nav ul li a:hover{
+	color: #f9004d;
+	transition: .4s;}
+
+.container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.container .box
+{
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 100px 20px; */
+  margin-top: 350px;
+  margin-right: 10px;
+  margin-left: 20px;
+  transition: 0.5s;
+}
+
+.container .box::before
+{
+  content:' ';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+
+.container .box::after
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 50;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(30px);
+}
+
+.container .box:hover:before,
+.container .box:hover:after
+{
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+  
+}
+
+.container .box:nth-child(1):before,
+.container .box:nth-child(1):after
+{
+  background: linear-gradient(315deg, #ffbc00, #ff0058)
+}
+
+.container .box:nth-child(2):before,
+.container .box:nth-child(2):after
+{
+  background: linear-gradient(315deg, #03a9f4, #ff0058)
+}
+
+.container .box:nth-child(3):before,
+.container .box:nth-child(3):after
+{
+  background: linear-gradient(315deg, #4dff03, #00d0ff)
+}
+
+.container .box span
+{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.container .box span::before
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.1s;  
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+}
+
+.container .box .content
+{
+  position: relative;
+  left: 0;
+  padding: 40px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  transform: 0.5s;
+  color: rgb(14, 7, 7);
+  
+}
+
+.container .box:hover .content
+{
+  left: -25px;
+  padding: 60px 40px;
+}
+
+ .container .box .content h2 
+{
+  font-size: 3em;
+  color: rgb(251, 251, 251);
+  margin-bottom: 10px;
+}
+
+.container .box .content p
+{
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.container .box .content a
+{
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  background: #fff; 
+  padding: 50px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.container .box .content a:hover
+{ 
+  background: #ffcf4d;
+  border: 1px solid rgba(255, 0, 88, 0.4);
+  box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+}
+    </style>
+</head>
+<body>
+  <div class="hero">
+		<nav>
+			<a href="index.html"><h2 class="logo">Shutter<span>Up</span></h2></a>
+			<ul>
+				<li class="na1"><a href="index.html">Home</a></li> 
+				<li class="na1"><a href="03 TypesOfCamera.html">About</a></li>
+				<li class="na1"><a href="08 Contact Us.html">Contact Us</a></li>
+			</ul>
+		</nav>
+    <!-- <h1 class="headi1">Features Of Camera</h1> -->
+    <div class="container">
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>Resolution</h2>
+            <h3>This term refers to the sharpness, or detail, of a picture. The higher the number of pixels, the higher the 
+                resolutions. You can determined the resolution you need by determining what you really want to do with these pictures.
+                 Picture size is measured by how many pixels make up an image and is measured by horizontal by vertical resolution, 
+                 as in 1280 x 960. The manufacturers break this down to about 5 main different categories of resolutions.</h3>
+          </div>
+        </div>
+        <div class="box">
+            <span></span>
+            <div class="content">
+              <h2>Memory</h2>
+              <h3>Digital cameras store pictures as data files rather than on film. The size of your memory determines the number of 
+                pictures you can take before downloading the images to a computer, at which time you can go back and fill the memory up 
+                with new pictures. Most cameras come with only 8 megabytes (MB) of memory, which for a 2 or 3 mega pixel camera could be 
+                only 10 to 40 photos. More memory is available by buying removable memory, such as a memory card.</h3>
+            </div>
+          </div>
+
+          <div class="box">
+            <span></span>
+            <div class="content">
+              <h2>Flash Type</h2>
+              <h3>A flash, of course, is the extra light needed to shoot inside or in low-light conditions. Most digital cameras have built-in flash with a range of 10 to 16 feet. Other flash options include:
+                Red Eye Reduction - Two flashes are emitted, the first to contract the iris so that the eye doesn't reflect as much light with the second, which keeps friends and family member from looking fiendish in the photo.
+                External Flash - More powerful than automatic, this allows you to attach the flash to the camera and place it strategically. The types include "flash sync" and "Hot Shoe."</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+            <div class="box">
+              <span></span>
+              <div class="content">
+                <h2>LCD Screen and Viewfinder</h2>
+                <h3>Small, point-and-shoot cameras use a "live preview" LCD screen to take pictures and display the stored images. Digital SLRs have a traditional viewfinder that 
+                    you press your eye against for taking pictures and mostly use the LCD as a monitor to show the results. The larger the LCD screen, the more the camera serves 
+                    as a convenient playback device.</h3>
+              </div>
+            </div>
+
+            <div class="box">
+                <span></span>
+                <div class="content">
+                  <h2>Optical and Electronics Quality</h2>
+                  <h3>The optical quality of the camera's lens greatly contributes to picture quality. In addition, the color and geometric accuracy of the pixels in the CCD or CMOS sensor 
+                    combined with the camera's internal processing circuits make all the difference. Specifications on paper are not enough, and reviews from photographic websites are very valuable.</h3>
+                </div>
+              </div>
+
+              <div class="box">
+                <span></span>
+                <div class="content">
+                  <h2>Controls and shooting information</h2>
+                  <h3>The variety of different settings, data and control systems available on the range of digital camera models on the market makes it impractical to try to list them all. 
+                    Depending on the camera, settings are selected from menus available on the viewfinder (eye-level viewfinder or display screen), separate mini-screens on the tops or backs 
+                    of some high-end cameras, and via buttons, wheels, switches and control panels just about anywhere on the camera body</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="box">
+                <span></span>
+                <div class="content">
+                  <h2>Metering Modes</h2>
+                  <h3>Your DSLR will probably allow you to change to one of three different metering modes, 
+                    depending on what you intend to photograph:<b>Evaluative Metering</b> (also known as Multiple Metering)
+
+                    Evaluative Metering gets the camera to measure the most suitable exposure by determining the levels of brightness in the entire frame. This is generally the one you will want to use—most of the time.
+                    
+                    <B>Center Weighted Metering</B>
+                    This method is used to focus on the subject in the center of the frame in order to measure the whole screen evenly.</h3>
+                </div>
+              </div>
+
+              <div class="box">
+                <span></span>
+                <div class="content">
+                  <h2>Custom White Balance</h2>
+                  <h3>I know of some professional photographers who will typically shoot in auto white balance mode, most of the time. However,
+                     there are times when they won’t do that, such as at an indoor ice rink, where the indoor light can render the white of the ice 
+                     rink a different color to what you actually see. So, to combat this, they will instead prefer to dictate to the camera what “white” 
+                     actually looks like. This generally involves you going into the white balance menu system, selecting a custom preset option, and then you will 
+                     take a photo of how you want the white to be in all of your photos. </h3>
+                </div>
+              </div>
+
+              <div class="box">
+                <span></span>
+                <div class="content">
+                  <h2>Focusing Modes</h2>
+                  <h3>This relates to how the autofocus system works. You may have the experience of turning on a DSLR camera and, when you go to focus the
+                     camera, in order to take a test shot, a bunch of different indicators flash upon the LCD or Electronic Viewfinder (EVF). These indicators
+                      are the different points of the spectrum that have been activated and the camera calculates that certain areas are the ones that you may want in focus,
+                       and these are typically represented by red or green boxes over different parts of the image.</h3>
+                </div>
+              </div>
+            </div>
+
+            
+        
+        
+</body>
